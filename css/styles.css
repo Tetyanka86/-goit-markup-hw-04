@@ -183,9 +183,6 @@ header{
 }
 .header-second-item{
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap:10px;
 }
 
 .header-mail-link, .header-tel-link 
@@ -195,14 +192,21 @@ header{
     fill: var(--primary-text-color);
 }
 
-.header-mail-link:hover, .header-tel-link:hover, 
-.header-mail-link:focus, .header-tel-link:focus
-{color: var(--accent-color);}  
-
-.mail-icon:hover, .tel-icon:hover,
-.mail-icon:focus, .tel-icon:focus {
-    fill: var(--accent-color);
+.mail-icon,.tel-icon{
+    margin-right: 10px;
+}
+.header-mail-link:hover, .header-tel-link:hover,
+.header-mail-link:focus, .header-tel-link:focus {
+color: var(--accent-color);
 }  
+
+.header-mail-link:hover .mail-icon, 
+.header-mail-link:focus .mail-icon
+{fill: var(--accent-color);}  
+
+.header-tel-link:hover .tel-icon, 
+.header-tel-link:focus .tel-icon
+{fill: var(--accent-color);}
 
 
 /* Hero */
@@ -259,32 +263,13 @@ header{
     display: flex;
 }
 
-.features-item::before{
-    display:block;
-    content:"";
+.features-icon-box{
     height: 120px;
-    margin-bottom: 30px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #F5F4FA;
+    background: #F5F4FA;
     border-radius: 4px;
-}
-
-.antenna::before{
-    background-image: url(../images/antenna\ 1.svg);
-}
-
-.clock::before{
-    background-image: url(../images/clock\ 1.svg);
-}
-
-.diagram::before{
-    background-image: url(../images/diagram\ 1.svg);
-}
-
-.astronaut::before{
-    background-image: url(../images/astonaut\ 1.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .features-item{
@@ -296,6 +281,7 @@ header{
 }
 
 .features-subtitle{
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
@@ -336,6 +322,7 @@ header{
 .team-description{
     text-align: center;
     padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .team-item{
@@ -350,8 +337,6 @@ header{
 
 .socials-team{
     display: inline-flex;
-    padding-bottom: 30px;
-    
 }
 .socials-item{
     width: 44px;
@@ -405,7 +390,6 @@ header{
 /* Regular customers */
 
 .customers{
-    background-color: #F5F5F5;
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -445,20 +429,14 @@ header{
     /* Footer */
     
 .footer{
-    padding: 0;
+    padding: 60px 0;
     box-sizing: border-box;
     background-color:var(--footer-bc-color);
 }
 
-.container-one{
-    padding: 60px 0;
-}
 .container-two{
-    padding-top: 72px;
-    padding-bottom: 100px;
     margin-left: 70px;
 }
-
 
 .footer-address{
     font-style: normal;
